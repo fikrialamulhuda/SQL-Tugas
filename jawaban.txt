@@ -1,0 +1,7 @@
+CREATE TABLE `myshop`.`users` ( `id` INT NOT NULL AUTO_INCREMENT , `name` VARCHAR(255) NOT NULL , `email` VARCHAR NOT NULL , `password` VARCHAR NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+CREATE TABLE `myshop`.`items` ( `id` INT NOT NULL AUTO_INCREMENT , `name` VARCHAR(255) NOT NULL , `description` VARCHAR(255) NOT NULL , `price` INT NOT NULL , `stock` INT NOT NULL , `category by id` INT FOREIGN KEY REFERENCES (categories) , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+CREATE TABLE `myshop`.`categories` ( `id` INT NOT NULL AUTO_INCREMENT , `name` VARCHAR(255) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+INSERT INTO `users` (`id`, `name`, `email`, `password`) VALUES (NULL, 'John Doe', 'john@doe.com', 'john123'), (NULL, 'Jane Doe', '	jane@doe.com', '	jenita123');
+INSERT INTO `categories` (`name`) VALUES (`gadget`, `cloth`, `men`, `women`, `branded`, `password`);
+INSERT INTO `items` (`name`, `description`, `price`, `stock`, `category_id`) VALUES ('Sumsang b50', 'hape keren dari merek sumsang', '4000000', '100','1'), ('Uniklooh', 'baju keren dari brand ternama', '500000', '50','2'), ('IMHO Watch', 'jam tangan anak yang jujur banget', '20000000', '10','1')
+
